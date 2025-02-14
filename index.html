@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartão Saúde Fácil</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <h1>Cartão Saúde Fácil</h1>
+        <p>O melhor cartão de benefícios para você e sua família</p>
+    </header>
+
+    <!-- Navegação -->
+    <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+    <!-- Seção Principal -->
+    <section class="main-content" id="sobre">
+        <h2>Sobre o Cartão Saúde Fácil</h2>
+        <p>O Cartão Saúde Fácil oferece descontos exclusivos em consultas médicas, exames e serviços de saúde para você e sua família. Nossa missão é facilitar o acesso à saúde de qualidade com preços acessíveis.</p>
+        <button class="cta-button">Adquirir Cartão</button>
+    </section>
+
+    <!-- Seção de Serviços -->
+    <section class="services">
+        <h2>Serviços Oferecidos</h2>
+        <div class="service">
+            <img src="icons/clinico-geral.png" alt="Consulta com Clínico Geral">
+            <h3>Consulta Com Clínico Geral</h3>
+            <p>Atendimento especializado para o seu bem-estar.</p>
+        </div>
+        <div class="service">
+            <img src="icons/especialistas.png" alt="Consulta com Especialistas">
+            <h3>Consulta Com Especialistas</h3>
+            <p>Consultas com especialistas em diversas áreas.</p>
+        </div>
+        <div class="service">
+            <img src="icons/exames-laboratoriais.png" alt="Exames Laboratoriais">
+            <h3>Exames Laboratoriais</h3>
+            <p>Realizamos uma variedade de exames laboratoriais.</p>
+        </div>
+        <div class="service">
+            <img src="icons/exames-imagens.png" alt="Exames de Imagens">
+            <h3>Exames De Imagens</h3>
+            <p>Contamos com equipamentos modernos para exames de imagem.</p>
+        </div>
+        <div class="service">
+            <img src="icons/ultrassonografia.png" alt="Ultrassonografias">
+            <h3>Ultrassonografias</h3>
+            <p>Exames de ultrassonografia para diagnóstico preciso.</p>
+        </div>
+        <div class="service">
+            <img src="icons/exames-cardiologicos.png" alt="Exames Cardiológicos">
+            <h3>Exames Cardiológicos</h3>
+            <p>Exames especializados para a saúde do seu coração.</p>
+        </div>
+        <div class="service">
+            <img src="icons/risco-cirurgico.png" alt="Risco Cirúrgico">
+            <h3>Risco Cirúrgico</h3>
+            <p>Avaliação para garantir a segurança durante cirurgias.</p>
+        </div>
+        <div class="service">
+            <img src="icons/odontologia.png" alt="Procedimentos Odontológicos">
+            <h3>Procedimentos Odontológicos</h3>
+            <p>Tratamentos odontológicos de qualidade para você.</p>
+        </div>
+        <div class="service">
+            <img src="icons/fisioterapia.png" alt="Fisioterapia em Geral">
+            <h3>Fisioterapia Em Geral</h3>
+            <p>Tratamentos de fisioterapia para recuperação e bem-estar.</p>
+        </div>
+        <div class="service">
+            <img src="icons/nutricionista.png" alt="Consulta com Nutricionista">
+            <h3>Consulta Com Nutricionista</h3>
+            <p>Acompanhamento nutricional personalizado para sua saúde.</p>
+        </div>
+        <div class="service">
+            <img src="icons/psicologia.png" alt="Psicologia Clínica">
+            <h3>Psicologia Clínica</h3>
+            <p>Tratamento psicológico para o seu bem-estar mental.</p>
+        </div>
+    </section>
+
+    <!-- Formulário de Contato -->
+    <section class="contact-form" id="contato">
+        <h2>Entre em Contato</h2>
+        <form id="formContato" action="envia.php" method="POST">
+            <input type="text" name="nome" placeholder="Seu Nome" required>
+            <input type="email" name="email" placeholder="Seu E-mail" required>
+            <textarea name="mensagem" placeholder="Sua Mensagem" rows="5" required></textarea>
+            <input type="submit" value="Enviar Mensagem">
+        </form>
+        <!-- Mensagem de confirmação
+        <p id="mensagemEnviada" style="display: none; color: green;">Sua mensagem foi enviada com sucesso!</p>-->
+    </section>
+
+    <!-- Botão WhatsApp -->
+    <a href="https://wa.me/5599999999999" target="_blank" class="whatsapp-button">
+        <img src="imagens/whatsapp-icon.png" alt="WhatsApp">
+    </a>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2025 Cartão Saúde Fácil. Todos os direitos reservados.</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/consultafacilpa/" target="_blank" class="social-icon">
+                <img src="imagens/facebook-logo.png" alt="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/consultafacilpa/" target="_blank" class="social-icon">
+                <img src="imagens/instagram-logo.png" alt="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        // Exibir mensagem de confirmação após o envio do formulário
+        document.getElementById("formContato").addEventListener("submit", function(event) {
+            event.preventDefault();
+            document.getElementById("mensagemEnviada").style.display = "block";
+            setTimeout(() => {
+                document.getElementById("mensagemEnviada").style.display = "none";
+            }, 5000);
+            this.reset();
+        });
+    </script>
+
+</body>
+</html>
