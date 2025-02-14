@@ -2,7 +2,7 @@
 
     $nome = addslashes($_POST['nome']);
     $email = addslashes($_POST['email']);
-    $mensagen = ($_POST['email']);
+    $mensagen = ($_POST['mensagem']);
 
     $para = "abner.luiz23@gmail.com;";
     $assunto = "Coleta de dados - Cartão Saúde Fácil";
